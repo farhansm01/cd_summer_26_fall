@@ -98,15 +98,80 @@ void checkIdentifier() {
     cout<<"Valid identifier"<<endl;
 }
 
+
+void findAverage(){
+
+    int a;
+    cout<<"enter array size: ";
+    cin>>a;
+
+    int arr[a];
+    cout<<"enter the values of the array: ";
+
+    int sum=0;
+
+    for(int i=0; i<a; i++){
+        cin>>arr[i];
+        sum += arr[i];
+    }
+
+    cout<<"average: "<<sum/a<<endl;
+
+
+
+
+}
+
+
+void findMinMax() {
+
+    int a;
+    cout<<"enter array size: ";
+    cin>>a;
+
+    int arr[a];
+    cout<<"enter the values of the array: ";
+
+    for(int i=0; i<a; i++){
+        cin>>arr[i];
+
+    }
+
+    int minVal = arr[0];
+    int maxVal = arr[0];
+
+    for(int i=0; i<a; i++){
+        if(arr[i] < minVal){
+            minVal = arr[i];
+        }
+        if(arr[i] > maxVal){
+            maxVal = arr[i];
+        }
+    }
+
+    cout<<"Minimum value: "<<minVal<<endl;
+    cout<<"Maximum value: "<<maxVal<<endl;
+}
+
+void fullName(){
+    string first, last;
+
+    cout<<"enter first name: ";
+    getline(cin, first);
+
+    cout<<"enter last name: ";
+    getline(cin, last);
+
+
+    cout<<"your full name is: "<<first + ' ' + last<<endl;
+
+
+
+}
+
 int main()
 {
-    numberCheck();
-
-    operatorCheck();
-
-    commentCheck();
-
-    checkIdentifier();
+    //fullName();
 
 
 }
